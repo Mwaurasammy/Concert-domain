@@ -14,27 +14,27 @@ session.query(Band).delete()
 session.query(Venue).delete()
 
 # Create Bands
-band1 = Band(name="The Rolling Stones", hometown="London")
+band1 = Band(name="Milky Chance", hometown="Carlifonia")
 band2 = Band(name="Sauti Sol", hometown="Nairobi")
 band3 = Band(name="Of Monsters and Men", hometown="Iceland")
 band4 = Band(name="Nirvana", hometown="Washington")
 
 # Create Venues
-venue1 = Venue(title="Madison Square Garden", city="New York")
+venue1 = Venue(title="The dome", city="France")
 venue2 = Venue(title="The Carnivore Grounds", city="Nairobi")
-venue3 = Venue(title="Wembley Stadium", city="London")
+venue3 = Venue(title="Lighthouse", city="Jamaica")
 venue4 = Venue(title="Super Bowl", city="Las Vegas")
 
 # Create Concerts (multiple concerts for same band at different venues)
-concert1 = Concert(band=band1, venue=venue1, date="2024-09-14")  # Rolling Stones at Madison Square Garden
-concert2 = Concert(band=band1, venue=venue3, date="2024-10-10")  # Rolling Stones at Wembley Stadium
+concert1 = Concert(band=band1, venue=venue1, date="2024-09-14")  # Milky Chance at The dome
+concert2 = Concert(band=band1, venue=venue3, date="2024-10-10")  # Milky chance at Lighthouse
 concert3 = Concert(band=band2, venue=venue2, date="2024-09-20")  # Sauti Sol at The Carnivore Grounds
 concert4 = Concert(band=band2, venue=venue4, date="2024-11-15")  # Sauti Sol at Super Bowl
-concert5 = Concert(band=band3, venue=venue3, date="2024-10-05")  # Of Monsters and Men at Wembley Stadium
+concert5 = Concert(band=band3, venue=venue3, date="2024-10-05")  # Of Monsters and Men at WLighthouse
 concert6 = Concert(band=band4, venue=venue4, date="2024-11-11")  # Nirvana at Super Bowl
 
 # Same band performing at the same venue on different dates
-concert7 = Concert(band=band1, venue=venue1, date="2024-12-01")  # Rolling Stones at Madison Square Garden again
+concert7 = Concert(band=band1, venue=venue1, date="2024-12-01")  # Milky chance at the dome again
 concert8 = Concert(band=band2, venue=venue2, date="2024-12-10")  # Sauti Sol at The Carnivore Grounds again
 
 # Add everything to the session
